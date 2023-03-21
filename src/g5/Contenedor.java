@@ -11,8 +11,8 @@ public class Contenedor {
     private String nombreRecibe;
     //---------------------------------------------CONSTRUCTORES----------------------------------------------------------
     public Contenedor(int id) {
-        this.prioridad = 3; //3 será la prioridad por defecto
-        this.id = id; //id no puede ser null en ninguna circunstancia por eso este es el constructor más pequeño que se puede hacer
+        this.prioridad = 3;
+        this.id = id;
     }
     public Contenedor(int id, int peso, String pais, boolean inspeccionado, int prioridad, String contenido, String nombreEnvia, String nombreRecibe) {
         this(id);
