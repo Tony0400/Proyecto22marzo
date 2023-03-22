@@ -29,6 +29,29 @@ public class Main {
         System.out.println("Apilado: ");
         System.out.println(h.toString());
 
+        System.out.println(h.cantidadContPais("España"));
+        System.out.println("*****");
+        h.datosContenedor(2);
+        h.datosContenedor(8);
 
+        System.out.println("-----------------------------------------------------------------------------------------------");
+        //Para probar desapilar
+        Hub h1 = new Hub();
+        for(int i=0; i<10; i++){
+            for(int j=0; j<12; j++){
+                num = rand.nextInt(100 - 0 + 1) + 1;
+                aux1 = new Contenedor(num);
+                aux[i][j] = aux1;
+                if(i==2 || i==1) {
+                    aux [i][j] = null;
+                }
+            }
+        }
+        h1.setArrayCont(aux);
+
+        System.out.println(h1.toString());
+        System.out.println("................................");
+        h1.desapilar(2);
+        System.out.println(h1.toString());
     }
 }
