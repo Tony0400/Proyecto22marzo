@@ -86,11 +86,11 @@ public class Hub {
         }
         return cAux;
     }
-    public int cantidadContPais (String pais){
+    public int cantidadContPais (String pais) {
         int contador = 0;
         for (int i = 0; i < cc.length; i++) {
             for (int j = 0; j < cc[i].length; j++) {
-                if(cc[i][j].getPais()==pais){
+                if (cc[i][j].getPais() == pais) {
                     contador++;
                 }
             }
