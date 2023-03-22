@@ -71,4 +71,32 @@ public class Hub {
         }
         return cc;
     }
+    public Contenedor datosContenedor (int id){
+        Contenedor cAux = new Contenedor(0);
+        boolean encontrado = false;
+        if(id>0) {
+            for (int i = 0; i < cc.length; i++) {
+                for (int j = 0; j < cc[i].length && !encontrado; j++) {
+                    if (cc[i][j] != null && cc[i][j].getId() == id) {
+                        cAux = cc[i][j];
+                        encontrado = true;
+                    }
+                }
+            }
+        }
+        return cAux;
+    }
+    public int cantidadContPais (String pais){
+        int contador = 0;
+        for (int i = 0; i < cc.length; i++) {
+            for (int j = 0; j < cc[i].length; j++) {
+                if(cc[i][j].getPais()==pais){
+                    contador++;
+                }
+            }
+        }
+        return contador;
+    }
+
 }
+
